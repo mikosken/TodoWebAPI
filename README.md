@@ -18,3 +18,9 @@ To build and run click the Run-button for the project.
 ## License
 
 To be determined.
+
+## Acknowledgements
+
+Other sources of inspiration and knowledge:
+
+[Get started with Swashbuckle and ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-6.0&tabs=visual-studio)
