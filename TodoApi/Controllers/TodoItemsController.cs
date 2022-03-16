@@ -22,6 +22,10 @@ namespace TodoApi.Controllers
         }
 
         // GET: api/TodoItems
+        /// <summary>
+        /// Retrieves a collection of all TodoItems.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<TodoItemDTO>>> GetTodoItems()
         {
@@ -31,6 +35,11 @@ namespace TodoApi.Controllers
         }
 
         // GET: api/TodoItems/5
+        /// <summary>
+        /// Retrieves a specific TodoItem if it exists.
+        /// </summary>
+        /// <param name="id">Integer id of TodoItem</param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public async Task<ActionResult<TodoItemDTO>> GetTodoItem(long id)
         {
@@ -46,6 +55,12 @@ namespace TodoApi.Controllers
 
         // PUT: api/TodoItems/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        /// <summary>
+        /// Update a TodoItem in database.
+        /// </summary>
+        /// <param name="id">Integer id of TodoItem</param>
+        /// <param name="todoItemDTO">Simplified representation of TodoItem</param>
+        /// <returns></returns>
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateTodoItem(long id, TodoItemDTO todoItemDTO)
         {
@@ -77,6 +92,11 @@ namespace TodoApi.Controllers
 
         // POST: api/TodoItems
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        /// <summary>
+        /// Add a new TodoItem to database.
+        /// </summary>
+        /// <param name="todoItemDTO">Simplified representation of TodoItem</param>
+        /// <returns></returns>
         [HttpPost]
         public async Task<ActionResult<TodoItemDTO>> CreateTodoItem(TodoItemDTO todoItemDTO)
         {
@@ -96,6 +116,11 @@ namespace TodoApi.Controllers
         }
 
         // DELETE: api/TodoItems/5
+        /// <summary>
+        /// Remove specified TodoItem from database.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTodoItem(long id)
         {
